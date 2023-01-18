@@ -11,10 +11,12 @@ public class ApiController {
 
     @GetMapping("/get/{userid}")
     public String get(@PathVariable String userid , @RequestParam String account){
+
         return userid + account;
     }
     @PostMapping("/post")
-    public PostRequestDto post(@RequestBody PostRequestDto requestDto){
+    public PostRequestDto post(@RequestBody PostRequestDto requestDto)
+    {
         return  requestDto;
     }
     @PutMapping("/put")
